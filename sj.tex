@@ -24,7 +24,7 @@
 \let\apwtitle\title
 \renewcommand{\apwtitle}[1]{\title{
 	\vspace{-6ex}
-        {\fontsize{14pt}{0em}\selectfont \textbf{#1}}
+        {\fontsize{12pt}{0em}\selectfont \textbf{#1}}
         \vspace{-6.5ex}
 }}
 
@@ -37,7 +37,12 @@
 \titlespacing{\subsection}{0.em}{4pt}{2pt}
 \titlespacing{\subsubsection}{0em}{2pt}{2pt}
 
-\apwtitle{Deep imaging of the Pal 5 and GD-1 stellar streams with HSC}
+\pagenumbering{gobble}
+% \setlength{\parskip}{\baselineskip}%
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}%
+
+\apwtitle{Deep imaging of the GD-1 stellar stream with HSC -- A. Price-Whelan et al.}
 \date{}
 \author{}
 
@@ -45,11 +50,32 @@
 
 \begin{document}
 \maketitle
-\begin{center}{Adrian Price Whelan \textit{et al.}}\end{center}\vspace{-1.75ex}
 
-Some words yo!
+\vspace{-1em}
+The clustering of dark matter on scales smaller than dwarf galaxies remains one of the most pressing unknowns in cosmology and galaxy formation (Bullock \& Boylan-Kolchin 2017).
+Different dark matter theories predict different minimum mass scales for clustering: In the $\Lambda$CDM model, dark matter subhalos with negligible baryon fractions are expected to exist with masses as low as $10^{6}\rm\,M_\odot$ (Springel et al. 2008), while alternative models have larger cut-off masses in the dark matter power spectrum that depend on the parameters of these models (e.g., Bode et al. 2001, Hu et al. 2000).
 
-\section{Some stuff...}
+Within the stellar halo of our Galaxy, cold stellar streams --- remnants of disrupted globular clusters (Grillmair \& Carlin 2016) --- provide a unique and powerful way to test small-scale predictions from dark matter theories.
+An encounter between a stellar stream and a massive perturber alters the orderly structure of the stream by producing density variations along the stream (e.g., Carlberg 2012), and can create morphological features that are not expected in any simple models for stream formation (e.g., folds and loops of debris; Yoon et al. 2011).
+The stellar mass in such features and the density variations along streams are typically small relative to the background stellar density in our Galaxy:
+% \textbf{Deep photometric observations of Milky Way stellar streams provide critical data that will enable tests of dark matter theories on mass scales that are unreachable by any other method.}
+\textbf{Characterizing the detailed density structure of streams therefore requires deep photometric observations that will enable tests of dark matter theories on mass scales that are presently unreachable by any other method.}
+
+\section*{The GD-1 stream: a perturbed stream in the Milky Way halo}
+
+The GD-1 stellar stream, which spans heliocentric distances $d\sim 8$--$12~\textrm{kpc}$, was discovered using photometry from the Sloan Digital Sky Survey (SDSS; Grillmair \& Dionatos 2006) and has a stellar population (age $\sim 12~\textrm{Gyr}$) and width consistent with being a fully-disrupted globular cluster (Koposov et al. 2010).
+% GD-1 has been used to measure the mass and shape of the large-scale mass distribution within the Galaxy (Koposov et al. 2010; Bovy et al. 2016).
+Recently, using Megacam (CFHT) imaging over a $\sim 45^\circ \times 0.8^\circ$ footprint centered on the stream, de Boer at al. (2018) noted significant density variations along the stream and possible deviations of the main stream track that are not expected from simple models of the stream formation.
+However, despite reaching depths of $g \sim 24$, the contrast of the stream was significantly impeded fainter than $g \sim 23$ because of bad star--galaxy separation.
+
+Using astrometry from the \textit{Gaia} mission (DR2) combined with photometry from the PS1 survey (Chambers TODO), we recently mapped the stream over $\sim 100^\circ$ on the sky, producing the highest-contrast view of a cold stellar stream to date (Figure~1, Price-Whelan \& Bonaca 2018).
+This relatively contamination-free view of the stream reveals 2--3 significant under-densities or ``gaps'' (e.g., Erkal TODO) along the stream, one of which appears to have an associated spur of member stars that lies parallel to, but offset by $\sim1^\circ$ from, the main stream.
+This morphology can result from a stream interaction with a massive perturber (Figure~2) and is not expected from simple models of the formation of the GD-1 stream.
+
+\section*{HSC as a critical ...}
+
+The density variations in stellar streams induced by gravitational encounters have well-defined characteristics that depend on the properties of the perturber (mass, density, and relative velocity), the geometry of the encounter (angle and impact parameter), and the time of the encounter (e.g., Erkal TODO).
+
 
 % \begin{figure}[h]
 % \begin{center}
