@@ -1,5 +1,3 @@
-% TODO: how does density S/N translate to resolution in rho/rho_0?
-
 \documentclass[11pt]{article}
 
 \usepackage{hyperref}
@@ -11,6 +9,15 @@
 % Misc packages
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
+
+% Units
+\newcommand{\msun}{\textrm{M}_\odot}
+\newcommand{\kpc}{\textrm{kpc}}
+\newcommand{\kms}{\ensuremath{\textrm{km}~\textrm{s}^{-1}}}
+\newcommand{\masyr}{\ensuremath{\textrm{mas}~\textrm{yr}^{-1}}}
+
+% Astronomy
+\newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 
 % page size
 \geometry{
@@ -54,12 +61,11 @@
 
 \vspace{-1em}
 The clustering of dark matter on scales smaller than dwarf galaxies remains one of the most pressing unknowns in cosmology and galaxy formation (Bullock \& Boylan-Kolchin 2017).
-Different dark matter theories predict different minimum mass scales for clustering: In the $\Lambda$CDM model, dark matter subhalos with negligible baryon fractions are expected to exist with masses as low as $10^{6}\rm\,M_\odot$ (Springel et al. 2008), while alternative models have larger cut-off masses in the dark matter power spectrum that depend on the parameters of these models (e.g., Bode et al. 2001, Hu et al. 2000).
+Different dark matter theories predict different minimum mass scales for clustering: In the $\Lambda$CDM model, dark matter subhalos with negligible baryon fractions are expected to exist with masses as low as $10^{6}~\msun$ (Springel et al. 2008), while alternative models have larger cut-off masses in the dark matter power spectrum that depend on the parameters of these models (e.g., Bode et al. 2001, Hu et al. 2000).
 
 Within the stellar halo of our Galaxy, cold stellar streams --- remnants of disrupted globular clusters (Grillmair \& Carlin 2016) --- provide a unique and powerful way to test small-scale predictions from dark matter theories.
-An encounter between a stellar stream and a massive perturber alters the orderly structure of the stream by producing density variations along the stream (e.g., Carlberg 2012), and can create morphological features that are not expected in any simple models for stream formation (e.g., folds and loops of debris; Yoon et al. 2011).
-The stellar mass in such features and the density variations along streams are typically small relative to the background stellar density in our Galaxy, but have characteristic ``horn''-shaped profiles that distinguish encounter signatures from other plausible explanations (e.g., Figure~1, upper left panel).
-\textbf{Characterizing the detailed density structure of streams therefore requires deep photometric observations that will enable tests of dark matter theories on mass scales that are presently unreachable by any other method.}
+An encounter between a stellar stream and a massive perturber alters the orderly structure of the stream by producing density variations along the stream, and can create morphological features that are not expected in simple models for stream formation (e.g., gaps, folds, and loops of debris; Yoon et al. 2011).
+We recently showed that a prominent stellar stream in the Milky Way halo --- the GD-1 stream --- has several such morphological features: at least 2 gaps, with a ``spur'' of debris emanating from one gap (Price-Whelan \& Bonaca 2018).
 
 \section*{The GD-1 stream: a perturbed stream in the Milky Way halo}
 
@@ -72,23 +78,26 @@ Using astrometry from the \textit{Gaia} mission (DR2) combined with photometry f
 Figure~1 (lower panel) shows a $60^\circ$ segment of the stream selected with \textit{Gaia} + PS1: black markers show the sky positions (in GD-1 coordinates) of individual stars identified as probable stream members, with some background contamination throughout the field.
 This relatively contamination-free view of the stream reveals 2 significant under-densities or ``gaps'' (e.g., Erkal \& Belokurov 2015) along the stream (indicated in Figure~1), one of which appears to have an associated spur of member stars that lies parallel to, but offset by $\sim1^\circ$ from, the main stream (Gap 1; over-density of stars located near $(\phi_1, \phi_2) \sim (-32, 1)^\circ$).
 
+
+\section*{GD-1 perturbations as tracers of small-scale dark matter physics}
+
 Gaps in stellar streams with large density drops can only be formed through gravitational encounters (which can leave multiple gaps), or through the final disruption of the progenitor system (which can only explain one gap).
 \textbf{The existence of at least 2 gaps in the GD-1 stream and the presence of stream stars off of the main stream track (the spur) therefore strongly suggests the exciting possibility that the GD-1 stream has encountered a dense, massive perturber, such as a dark matter subhalo.}
+The origin of a gap can be inferred from the density profile of the region surrounding the gap: recently-formed subhalo gaps have characteristic ``horn''-shaped profiles (e.g., Figure~1, upper right panel).
+These density profiles encode properties of the perturber (mass and density), the geometry of the encounter (angle, impact parameter, and relative velocity), and the time of the encounter (e.g., Erkal \& Belokurov 2015).
+However, the stellar mass in these features and the density variations along streams are typically small relative to the background stellar density in our Galaxy: for a perturber mass $M \gtrsim 10^7~\msun$, and an encounter within the last orbital period, the density contrast between the horns and the stream is typically $\rho/\rho_0 \gtrsim 1.2$.
+\textbf{Characterizing the detailed density structure of streams therefore requires deep but wide-area photometric observations that will enable tests of dark matter theories on mass scales that are presently unreachable by any other method.}
 
 \section*{HSC will enable high signal-to-noise measurements of GD-1 gap profiles}
-
-The density profile of stream stars around a gap formed through a gravitational perturbation encodes properties of the perturber (mass and density), the geometry of the encounter (angle, impact parameter, and relative velocity), and the time of the encounter (e.g., Erkal \& Belokurov 2015).
-
-...
 
 We estimate the expected background contamination (stars and galaxies) in each proposed field using point sources (\texttt{i\_extendedness\_value == 0}) from a single HSC-SSP field at a comparable Galactic latitude to the fields proposed here.
 To estimate the signal-to-noise of the stream, we use a 12 Gyr, $[\textrm{Fe}/\textrm{H}] = -1.4$ luminosity function normalized to the number of \textit{Gaia}+PS1 selected stream stars (Price-Whelan \& Bonaca 2018) in a $1.5^\circ \times 1.5^\circ$ field centered at $(\phi_1, \phi_2) = (-35, 0)^\circ$.
 Figure~1 (top left) shows a simulated color-magnitude diagram (CMD) for this HSC field with simulated uncertainties for the stream stars estimated assuming a limiting $g$-band magnitude of $g \sim 25.5$.
-Figure~1 (top middle) shows the signal-to-noise of the stream from photometric filtering in the $g-i$ vs. $g$ CMD for 3 survey limiting magnitudes: PS1 $g \sim 22.5$, Megacam $g \sim 24$, and the proposed HSC observations $g \sim 25.5$.
-The expected signal-to-noise of the stream is a factor of $\approx 1.6$ larger than the previous Megacam survey.
+Figure~1 (top middle) shows the signal-to-noise of the stream in a single HSC field from photometric filtering in the $g-i$ vs. $g$ CMD for 3 survey limiting magnitudes: PS1 $g \sim 22.5$, Megacam $g \sim 24$, and the proposed HSC observations $g \sim 25.5$.
+To measure a 20\% density contrast, we need to reach a signal-to-noise $\textrm{S}/\textrm{N} = 30$ per field, which depends on SSP-like seeing to perform high-efficiency star-galaxy confusion.
+\textbf{HSC is the only instrument with sufficient area to efficiently survey multiple gaps in the GD-1 stream and provide a high enough signal-to-noise to measure gap density profile variations expected from an encounter with a low-mass dark matter subhalo.}
 
-We propose to observe 13 HSC fields along the GD-1 stream, covering two significant gaps (Figure~1, bottom panel, red circles).
-...
+% We propose to observe 13 HSC fields along the GD-1 stream, covering two significant gaps (Figure~1, bottom panel, red circles).
 
 \begin{figure}[t]
 \begin{center}
