@@ -10,7 +10,7 @@
 %%%%%%%%%%%%
 
 %%%%%%%%%% 1. Title of Proposal %%%%%%%%%%
-\title{Deep optical imaging of the Palomar 5 and GD-1 stellar streams with HSC}
+\title{Deep imaging of the GD-1 stellar stream with HSC}
 
 %%%%%%%%%% 2. Principal Investigator's information %%%%%%%%%%
 \PIfirstname {Adrian}
@@ -45,17 +45,17 @@
 
 %%%%%%%%%% 4. Abstract %%%%%%%%%%
 \begin{abstract}
-    % TODO: max 11 lines in PDF!
+We propose to use Subaru-HSC to obtain deep g- and i-band imaging over 40 degrees of the GD-1 stellar stream, a prominent Milky Way stellar stream that has significant gaps and density variations that may indicate past gravitational perturbations from a low-mass dark matter subhalo. Our observations will enable measurements of the density profile along the stream and around the gaps, which will definitively reveal their origin. If consistent with one or more encounters with a dark matter subhalo, these observations will enable the best constraints on the low-mass end of the dark matter mass spectrum, which will strongly constrain dark matter theories.
 \end{abstract}
 
 %%%%%%%%%% 5. Co-Investigators %%%%%%%%%%
 %\CoI{first name}{last name}{institute}{email address}
 \begin{investigators}
-\CoI{Rachael}{Beaton}{Princeton University}{}
+\CoI{Rachael}{Beaton}{Princeton University}{rachael.l.beaton@gmail.com}
 \CoI{Ana}{Bonaca}{Harvard University}{ana.bonaca@cfa.harvard.edu}
 \CoI{Scott}{Carlsten}{Princeton University}{scottgc@princeton.edu}
 \CoI{Masashi}{Chiba}{Tohoku University}{chiba@astr.tohoku.ac.jp}
-\CoI{Andy}{Goulding}{Princeton University}{goulding@astro.princeton.edu	}
+\CoI{Andy}{Goulding}{Princeton University}{goulding@astro.princeton.edu}
 \CoI{Jenny}{Greene}{Princeton University}{jgreene@astro.princeton.edu}
 \CoI{Masahiro}{Takada}{Kavli IPMU}{masahiro.takada@ipmu.jp}
 \CoI{}{}{}{}
@@ -105,7 +105,6 @@
 \relatobs{}{}{}{}
 \relatobs{}{}{}{}
 \end{relationto}
-% APW: not relevant!
 
 %%%%%%%%%% 10. Post-Observation Status and Publications %%%%%%%%%%
 %\pastrun{year/month}{proposal ID}{PI name}{status:completion/reduction/analysis}{status:publication}
@@ -117,11 +116,9 @@
 \pastrun{}{}{}{}{}
 \pastrun{}{}{}{}{}
 \end{previoususe}
-% APW: what do here?
 
 %%%%%%%%%% 11. Experience %%%%%%%%%%
-\experience{}
-% APW: Please briefly describe your experience, ability, need of assistance, etc. for making observations with Subaru.
+\experience{Our team has a wealth of experience related to the use of Subaru and the Hyper Suprime-Camera instrument. Seven of the observing team are members of the HSC-SSP collaboration and each have previous experience with the data reduction pipeline (hscPipe). For example, see Goulding et al. 2018, PASJ-SE, arXiv:1706.07436, Greco et al. 2017, PASJ-SE, arxiv:1704.06681, Kado-Fong et al. 2018, submitted, arxiv:1805.05970.}
 
 
 %%%%%%%%%%%%
@@ -132,18 +129,18 @@
 %\run{instrument}{# of hours}{moon phase}{moon distance}{seeing}{transparency}{airmass}
 % "tothours" is calcurated automatically by ProMS. No need to fill \tothours{}.
 \begin{observingrun}
+\run{HSC}{3.6}{dark/gray}{>60}{<1.0}{>0.8}{<2.0}
 \run{}{}{}{}{}{}{}
 \run{}{}{}{}{}{}{}
-\run{}{}{}{}{}{}{}
-\tothours{0}
-\minhours{0}
+\tothours{3.6}
+\minhours{3.6}
 %\secondchoice{}
 \orcomment{}
 \end{observingrun}
 
 %%%%%%%%%% 13. Instrument Requirements %%%%%%%%%%
 %\begin{schedule}
-\instruments{}
+\instruments{Standard HSC setup. Observations will use the HSC-g and HSC-i filters.}
 % Uncomment the following line if you want to make remote observations at Hilo.
 %\remoteobs
 % Uncomment the following line if you want to make remote observations at Mitaka.
@@ -156,10 +153,19 @@
 % Equinox is J2000.0 unless otherwise specified in Comments on Targets
 % Specify the coordinate in the format of hhmmss.ss +/-ddmmss.s for RA and Dec.
 \begin{targets}
-\target{}{}{}{}
-\target{}{}{}{}
-\target{}{}{}{}
-\target{}{}{}{}
+\target{HSCGD1-1}{093641.66}{+302344.9}{-}
+\target{HSCGD1-2}{094412.20}{+323756.4}{-}
+\target{HSCGD1-3}{095205.69}{+345022.3}{-}
+\target{HSCGD1-4}{100025.07}{+370047.2}{-}
+\target{HSCGD1-5}{100738.08}{+392412.1}{-}
+\target{HSCGD1-6}{101658.50}{+413008.9}{-}
+\target{HSCGD1-7}{102655.78}{+433306.7}{-}
+\target{HSCGD1-8}{103911.54}{+451546.8}{-}
+\target{HSCGD1-9}{105035.77}{+471046.8}{-}
+\target{HSCGD1-10}{110250.19}{+490113.5}{-}
+\target{HSCGD1-11}{111559.64}{+504626.8}{-}
+\target{HSCGD1-12}{113008.75}{+522541.7}{-}
+\target{HSCGD1-13}{114521.69}{+535807.5}{-}
 % no need to fill \targetflag
 \targetflag{}
 \targetcomment{}
@@ -172,20 +178,21 @@
 
 %%%%%%%%%% 15. Observing Method and Technical Details %%%%%%%%%%
 \begin{technicalinfo}
+Our proposed HSC footprint consists of 13 pointings (see Figure 1, bottom panel in Science Justification), to each be performed in 2 broadband filters: HSC-g and HSC-i. Our goal is to achieve uniform sensitivity across the full footprint in order to measure small density variations along the stellar stream. To do this, we require excellent star-galaxy separation under Gray-Dark conditions with seeing and transparency constraints comparable to the SSP survey, seeing ~0.8 arcsec and transparency ~0.9. Using the HSC-ETC calculator, we find that under these conditions we will detect point sources with g = 25.5, i = 25.5 with on source exposure times of 200 and 800 seconds, respectively, to a S/N> 10 in each band. The fiducial central pointing positions and their overlap are designed to obtain maximum area over the stream while still have ~1/2 the overlap as HSC-SSP for calibration. To provide more homogeneous coverage and fill CCD gaps, we will use a 5-point circular dither pattern, with the standard 2 arcminute radial shift, and a rotation of 10 degrees as defined in Section 2.1.5 of the HSC Program PI Document. The proposed HSC data will be reduced using the hscPipe software package, in the same manner as described in the HSC-SSP Overview and Survey Design paper (Aihara et al. 2017). Our total time request is 3.6 hours on-source + overhead. For most efficient use of the instrument and telescope (e.g., filter exchange), we request queue time, so that scheduling of these observations can be interspersed with other programs.
 \end{technicalinfo}
 
 
 %%%%%%%%%% 16. Public Data Archive of Subaru %%%%%
 \begin{smoka}
 % Uncomment the following line if you checked the public Subaru Telescope archive.
-%\smokacheck
+\smokacheck
 % If you propose observations in spite that there are available data in the public data archive,
 % please denote the reason in the following field.
-\smokacomment{}
+\smokacomment{No relevant HSC science exposures were found in SMOKA.}
 \end{smoka}
 
 %%%%%%%%%% 17. Justify Duplications with the HSC SSP %%%%%%%%%%
-\hscssp{}
+\hscssp{N/A}
 
 
 %%%%%%%%%%%%%
