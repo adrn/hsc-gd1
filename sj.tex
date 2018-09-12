@@ -61,7 +61,7 @@
 
 \vspace{-1em}
 The clustering of dark matter (DM) on scales smaller than dwarf galaxies remains one of the most pressing unknowns in cosmology and galaxy formation (Bullock \& Boylan-Kolchin 2017).
-Different dark matter theories predict different minimum mass scales for clustering: In the $\Lambda$CDM model, DM subhalos with negligible baryonic content are expected to exist with masses as low as $10^{6}~\msun$ (Springel et al. 2008), while alternative models (e.g., WDM, SIDM) have larger cut-off masses in the DM power spectrum that depend on the parameters of these models (e.g., Bode et al. 2001, Hu et al. 2000).
+Different dark matter theories predict different minimum mass scales for clustering: In the $\Lambda$CDM model, DM subhalos with negligible baryonic content are expected to exist with masses as low as $10^{6}~\msun$ (Springel et al. 2008), while alternative models (e.g., WDM, SIDM) have larger cut-off masses in the DM power spectrum that depend on the parameters of these models (e.g., Bode et al. 2001).
 
 Within the stellar halo of our Galaxy, cold stellar streams --- remnants of disrupted globular clusters (Grillmair \& Carlin 2016) --- are a unique and powerful way to test small-scale predictions from DM theories.
 A gravitational encounter between a stellar stream and a massive perturber, such as a DM subhalo, produces density variations along the stream, and can create morphological features including gaps, folds, and loops of debris (Yoon et al. 2011) that are not expected in models for stream formation in a smooth halo.
@@ -88,21 +88,22 @@ However, the induced density variations are typically small relative to the back
 \emph{Characterizing the detailed density structure of streams therefore requires deep but wide-area photometric observations that will enable tests of dark matter theories on mass scales that are presently unreachable by any other method.}
 
 \textbf{HSC will enable high signal-to-noise measurements of GD-1 gap profiles:}
+We propose to obtain deep $g$- and $i$-band imaging in 13 HSC fields along the GD-1 stream (Figure~1, red circles), covering two significant gaps, to measure density variations along the stream and around the gaps.
 We estimate the expected background contamination (stars and galaxies) in each proposed field using point sources (\texttt{i\_extendedness\_value == 0}) from a single HSC-SSP field at a comparable Galactic latitude to GD-1.
 To estimate the signal-to-noise of the stream, we use a 12 Gyr, $[\textrm{Fe}/\textrm{H}] = -1.4$ luminosity function normalized to the number of \textit{Gaia}+PS1 selected stream stars (Price-Whelan \& Bonaca 2018) in a $1.5^\circ \times 1.5^\circ$ field centered at $(\phi_1, \phi_2) = (-35, 0)^\circ$.
 Figure~1 (top left) shows a simulated color-magnitude diagram (CMD) for this HSC field with simulated uncertainties for the stream stars estimated assuming a limiting $g$-band magnitude of $g \sim 25.5$.
 Figure~1 (top middle) shows the signal-to-noise of the stream in a single HSC field from photometric filtering in the $g-i$ vs. $g$ CMD for 3 survey limiting magnitudes: PS1 $g \sim 22.5$, Megacam $g \sim 24$, and the proposed HSC observations $g \sim 25.5$.
 To measure a 20\% density contrast, we need to reach a signal-to-noise $\textrm{S}/\textrm{N} = 30$ per field, which depends on SSP-like seeing to perform high-efficiency star-galaxy separation.
 \emph{HSC is the only instrument with sufficient area and sensitivity to efficiently survey multiple gaps in the GD-1 stream and provide a high enough signal-to-noise to measure gap density profile variations expected from an encounter with a low-mass dark matter subhalo.}
-The proposed data will (1) definitively rule whether either of the gaps in GD-1 are a consequence of a perturbation, and, in case of a perturbation, (2) combined with a kinematic profile of the gap, will constrain the mass of the perturber to x (cite case study from erkal & belokurov 2015b). TODO here
+The proposed data will (1) definitively rule whether either of the gaps in GD-1 are a consequence of a gravitational encounter, and, if so, (2) combined with a kinematic profile of the gap, will constrain the mass of the perturber to $\sim 20\%$--$40\%$ (e.g., Table~2, Erkal \& Belokurov 2015b).
 % We propose to observe 13 HSC fields along the GD-1 stream, covering two significant gaps (Figure~1, bottom panel, red circles).
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{figure1.pdf}
 \caption{
-\textbf{Top left:} Simulated GD-1 stellar population in a single HSC field super-imposed over point sources from an HSC-SSP field at the same Galactic latitude.
-\textbf{Top middle:} Expected cumulative signal-to-noise in measuring the spatial density of the stream in a single HSC field as a function of limiting $g$ magnitude for various survey parameters.
+\textbf{Top left:} Simulated GD-1 stellar population in an HSC field super-imposed over point sources from an HSC-SSP field at the same Galactic latitude.
+\textbf{Top middle:} Expected cumulative signal-to-noise in measuring the spatial density of the stream in an HSC field as a function of limiting $g$ magnitude for various survey parameters.
 \textbf{Top right:} Theoretical gap density profiles predicted for a low-mass ($10^7~\textrm{M}_\odot$) subhalo encounter with a GD-1 like stream.
 \textbf{Bottom:} Gaia + PS1 selected GD-1 member stars (black markers) with proposed HSC pointings indicated (red circles).
 }
@@ -114,14 +115,12 @@ The proposed data will (1) definitively rule whether either of the gaps in GD-1 
 \textbf{References:}
 Bode et al. 2001, ApJ, 556, 93 ---
 Bonaca \& Hogg 2018, arXiv:1804.06854 ---
-Bovy et al. 2016, arXiv:1609.01298 ---
 Bullock \& Boylan-Kolchin 2017, ARAA, 55, 343 ---
-Carlberg et al. 2012, ApJ, 748, 20 ---
 de Boer et al. 2018, MNRAS, 477, 1893 ---
-Erkal \& Belokurov 2015, MNRAS, 450, 1136 ---
+Erkal \& Belokurov 2015a, MNRAS, 450, 1136 ---
+Erkal \& Belokurov 2015b, MNRAS, 454, 3542 ---
 Grillmair \& Dionatos 2006, ApJ, 643, L17 ---
 Grillmair \& Carlin 2016, arXiv:1603.08936 ---
-Hu et al. 2000, Phys. Rev. Lett., 85, 1158 ---
 Koposov et al. 2010, ApJ, 712, 260 ---
 Price-Whelan \& Bonaca 2018, ApJL, 863, L20 ---
 Springel et al. 2008, MNRAS, 391, 1685 ---
